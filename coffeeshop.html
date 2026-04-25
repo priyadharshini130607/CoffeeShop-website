@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brew & Bean Coffee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+
+  <nav>
+    <a class="logo" href="#">☕ Cup & Coffee</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-btn" onclick="scrollToSection('#menu')">Order Now</button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+
+  
+  <section id="hero">
+    <div class="hero-content">
+      <span class="hero-badge">☕ Est. 2020 · Coimbatore</span>
+      <h1 class="hero-title">Good Coffee,<br><span>Great Vibes.</span></h1>
+      <p class="hero-desc">
+        Freshly brewed, ethically sourced, lovingly crafted —
+        every cup tells a story. Come, sit, stay a while.
+      </p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn-main">See Menu</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section id="features">
+    <div class="features-header reveal">
+      <p class="section-tag">Why Choose Us</p>
+      <h2 class="section-title">We care about every <span>cup</span></h2>
+      <p class="section-desc">From bean to brew, quality is our promise.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card reveal">
+        <div class="card-icon">🌱</div>
+        <div class="card-title">Ethically Sourced</div>
+        <div class="card-text">Direct trade with farmers from Ethiopia, Colombia & India. Fair pay, great beans.</div>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🔥</div>
+        <div class="card-title">Fresh Roasted</div>
+        <div class="card-text">Beans roasted in-house every Monday. Always fresh, always flavourful.</div>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">❤️</div>
+        <div class="card-title">Made with Love</div>
+        <div class="card-text">Our baristas are trained to craft perfection in every single cup we serve.</div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section id="menu">
+    <div class="menu-layout">
+
+      <div class="menu-left reveal">
+        <p class="section-tag">What We Serve</p>
+        <h2 class="section-title">Our <span>Menu</span></h2>
+        <p class="section-desc">Simple choices, exceptional taste. Pick your favourite!</p>
+
+        <div class="tabs">
+          <button class="tab active" onclick="showTab('hot', this)">Hot ☕</button>
+          <button class="tab" onclick="showTab('cold', this)">Cold 🧊</button>
+          <button class="tab" onclick="showTab('food', this)">Food 🥐</button>
+        </div>
+      </div>
+
+      <div class="menu-right reveal">
+
+        
+        <div class="menu-panel active" id="tab-hot">
+          <div class="menu-item">
+            <span class="menu-emoji">☕</span>
+            <div class="menu-info">
+              <div class="menu-name">Espresso</div>
+              <div class="menu-desc">Bold, strong, classic double shot</div>
+            </div>
+            <span class="menu-price">₹180</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🥛</span>
+            <div class="menu-info">
+              <div class="menu-name">Latte</div>
+              <div class="menu-desc">Espresso with steamed milk & foam</div>
+            </div>
+            <span class="menu-price">₹260</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🫧</span>
+            <div class="menu-info">
+              <div class="menu-name">Cappuccino</div>
+              <div class="menu-desc">Equal parts espresso, milk, foam</div>
+            </div>
+            <span class="menu-price">₹240</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🍵</span>
+            <div class="menu-info">
+              <div class="menu-name">Masala Chai</div>
+              <div class="menu-desc">Spiced Indian tea, house blend</div>
+            </div>
+            <span class="menu-price">₹120</span>
+          </div>
+        </div>
+
+    
+        <div class="menu-panel" id="tab-cold">
+          <div class="menu-item">
+            <span class="menu-emoji">🧊</span>
+            <div class="menu-info">
+              <div class="menu-name">Cold Brew</div>
+              <div class="menu-desc">18-hour slow steeped, super smooth</div>
+            </div>
+            <span class="menu-price">₹300</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🍦</span>
+            <div class="menu-info">
+              <div class="menu-name">Affogato</div>
+              <div class="menu-desc">Espresso poured over vanilla ice cream</div>
+            </div>
+            <span class="menu-price">₹340</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🥤</span>
+            <div class="menu-info">
+              <div class="menu-name">Iced Latte</div>
+              <div class="menu-desc">Chilled espresso, milk over ice</div>
+            </div>
+            <span class="menu-price">₹280</span>
+          </div>
+        </div>
+
+        
+        <div class="menu-panel" id="tab-food">
+          <div class="menu-item">
+            <span class="menu-emoji">🥐</span>
+            <div class="menu-info">
+              <div class="menu-name">Butter Croissant</div>
+              <div class="menu-desc">Flaky, buttery, freshly baked</div>
+            </div>
+            <span class="menu-price">₹140</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🍞</span>
+            <div class="menu-info">
+              <div class="menu-name">Avocado Toast</div>
+              <div class="menu-desc">Sourdough, avo, poached egg</div>
+            </div>
+            <span class="menu-price">₹280</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-emoji">🍰</span>
+            <div class="menu-info">
+              <div class="menu-name">Cheesecake Slice</div>
+              <div class="menu-desc">Classic New York style, creamy</div>
+            </div>
+            <span class="menu-price">₹200</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section id="about">
+    <div class="about-image-box">☕</div>
+
+    <div class="about-text">
+      <p class="section-tag">Our Story</p>
+      <h2 class="section-title reveal">More than coffee,<br>it's a <span>community</span></h2>
+      <p class="section-desc reveal">
+        Started in 2020 by two friends who wanted a cozy corner in Coimbatore
+        where people could slow down, sip good coffee, and just be.
+        Today, we're a family of coffee lovers — and you're always welcome here.
+      </p>
+      <div class="stats reveal">
+        <div class="stat-item">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Years Open</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">18</div>
+          <div class="stat-label">Bean Origins</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Happy Regulars</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section id="reviews">
+    <div class="reviews-header reveal">
+      <p class="section-tag">Customer Reviews</p>
+      <h2 class="section-title">What our <span>regulars</span> say</h2>
+      <p class="section-desc" style="margin:0 auto;">Real words from real coffee lovers. ☕</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best latte I've ever had in Coimbatore! The atmosphere is so cozy and the staff is super friendly. I come here every single morning!"</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Ananya R.</div>
+            <div class="review-loc">📍 Coimbatore</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Their cold brew is absolutely smooth and strong. Perfect for a hot Chennai afternoon. Highly recommend the Affogato too!"</p>
+        <div class="review-author">
+          <div class="review-avatar">K</div>
+          <div>
+            <div class="review-name">Karthik M.</div>
+            <div class="review-loc">📍 Tiruppur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Love the vibe here! The masala chai is the best I've tasted outside of home. Will definitely bring my friends next time."</p>
+        <div class="review-author">
+          <div class="review-avatar">P</div>
+          <div>
+            <div class="review-name">Priya S.</div>
+            <div class="review-loc">📍 Chennai</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  
+  <section id="contact">
+    <p class="section-tag reveal">Find Us</p>
+    <h2 class="section-title reveal">Come <span>Visit</span> Us</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="contact-icon">📍</div>
+        <div class="contact-title">Location</div>
+        <div class="contact-info">12, Cross Cut Rd,<br>Coimbatore – 601204</div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-title">Hours</div>
+        <div class="contact-info">Mon–Fri: 7am – 8pm<br>Sat: 8am – 9pm<br>Sun: 9am – 6pm</div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-icon">📞</div>
+        <div class="contact-title">Contact</div>
+        <div class="contact-info">+91 98765 43210<br>hello@cupcoffee.in</div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-icon">📱</div>
+        <div class="contact-title">Follow Us</div>
+        <div class="contact-info">@cupcoffee<br>Instagram · Facebook</div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-icon">💬</div>
+        <div class="contact-title">WhatsApp Us</div>
+        <div class="contact-info">+91 98765 43210<br>Mon–Sat: 9am – 7pm<br>Quick replies guaranteed!</div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-icon">🅿️</div>
+        <div class="contact-title">Parking & Directions</div>
+        <div class="contact-info">Free parking available<br>Near Annapoorna Hotel <br>Bus: 23C, 27D stops nearby</div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <footer>
+    <p>© 2020 <span>Cup & Coffee</span> · Made with ☕ in Coimbatore</p>
+  </footer>
+
+
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
